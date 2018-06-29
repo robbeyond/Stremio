@@ -1,5 +1,17 @@
 import React from 'react';
 
+var list = [];
+
+function Elements(element){
+    return(
+         <div>
+            <h1>{element.name}</h1>
+            <img src={element.poster} />
+            <img key={element.id} src="" />
+        </div>
+    );
+}
+
 const client = require('./stremio-addon-client')
 const officialAddons = require('./stremio-official-addons')
 const aggregators = require('./stremio-aggregators')
@@ -19,23 +31,26 @@ aggr.evs.on('updated', function() {
 	// iterate through aggr.results
     // each result is a row of items that you have to display
     console.log(aggr.results);
-	/*aggr.results.forEach(function(result) {
-		console.log(result.type)
+	aggr.results.forEach(function(result) {
+		//console.log(result.type)
 		// each object in result.response.metas is an item that you have to display
-		//if (result.response && result.response.metas)
-	})*/
+		if (result.response && result.response.metas){
+            list = Elements(result.response.metas[0]) ;
+        }
+    })
+
 
 });
 
 
 class Stremio extends React.Component{
-   
 
     render(){
-        return(
-          <div>{aggr.results[0].type}</div>
+        return  (
+        <div>{list}</div>
         )
     }
+    
 }
 
 export default Stremio;

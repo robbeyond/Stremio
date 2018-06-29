@@ -1,0 +1,48 @@
+.toggle {
+  background: yellow;
+  width: 11%;
+  position: relative;
+  left: 7%;
+  border-radius: 100%;
+}
+body {
+  background: url(https://images.alphacoders.com/609/609823.jpg);
+  background-size: 100%;
+}
+.elements {
+  display: inline-block;
+  width: 25%;
+}
+img {
+  position: relative;
+  left: 18%;
+}
+h1 {
+  text-align: center;
+  font-size: 4em;
+  color: maroon;
+  border: 3px black solid;
+  width: 25%;
+  left: 38%;
+  position: relative;
+  border-radius: 12%;
+  background: white;
+}
+.row {
+  margin-top: 43px;
+}
+h2 {
+  font-size: 3.2em;
+  margin: 1%;
+  background: white;
+  display: block;
+  text-align: center;
+  font-style: italic;
+}
+p {
+  font-size: 2em;
+  text-align: center;
+  background: white;
+  border-radius: 0% 20%;
+  margin: 1%;
+}
