@@ -88,7 +88,7 @@ for(var i = 0; i < getArray.length; i++){
 }
 
 
-ReactDOM.render(<Proba />, document.getElementById('root'));
+ReactDOM.render(<Library all={getArray} />, document.getElementById('root'));
 registerServiceWorker();
 
 });
